@@ -5,14 +5,18 @@ import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
+import javax.validation.constraints.NotBlank
 
 @Entity(name = "veiculo")
 data class Veiculo(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
+    @field:NotBlank
     val modelo: String,
+    @field:NotBlank
     val marcar: String,
+    @field:NotBlank
     val placa: String
 ): Serializable{
 
