@@ -1,23 +1,29 @@
 package com.michelzarpelon.curso.model
 
+import io.micronaut.core.annotation.Introspected
 import java.io.Serializable
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.validation.constraints.NotBlank
+import javax.validation.constraints.NotNull
 
+@Introspected
 @Entity(name = "veiculo")
 data class Veiculo(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
-    @field:NotBlank
-    val modelo: String,
-    @field:NotBlank
-    val marcar: String,
-    @field:NotBlank
-    val placa: String
+    var id: Long,
+    @field:NotBlank(message = "Inserir modelo")
+    @field:NotNull(message = "Inserir modelo")
+    var modelo: String,
+    @field:NotBlank(message = "Inserir modelo")
+    @field:NotNull(message = "Inserir modelo")
+    var marcar: String,
+    @field:NotBlank(message = "Inserir modelo")
+    @field:NotNull(message = "Inserir modelo")
+    var placa: String
 ): Serializable{
 
     companion object{

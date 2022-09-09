@@ -3,12 +3,13 @@ package com.michelzarpelon.curso.controller
 import com.michelzarpelon.curso.model.Veiculo
 import com.michelzarpelon.curso.service.VeiculoService
 import io.micronaut.http.MediaType
-import io.micronaut.http.annotation.Controller
-import io.micronaut.http.annotation.Get
-import io.micronaut.http.annotation.PathVariable
+import io.micronaut.http.annotation.*
+import io.micronaut.validation.Validated
 import org.slf4j.LoggerFactory
+import javax.validation.Valid
 
 @Controller("veiculos")
+@Validated
 class VeiculoController(
     private val veiculoService: VeiculoService
 ) {
@@ -30,6 +31,9 @@ class VeiculoController(
         veiculoService.findAll()
         return "OLa"
     }
+
+    @Post(produces = [MediaType.APPLICATION_JSON], consumes = [MediaType.APPLICATION_JSON])
+    fun create(@Body @Valid veiculo: Veiculo) = veiculo
 
 
 }
