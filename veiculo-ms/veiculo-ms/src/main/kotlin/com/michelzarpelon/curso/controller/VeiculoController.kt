@@ -20,17 +20,19 @@ class VeiculoController(
     }
 
     @Get(produces = [MediaType.APPLICATION_JSON], value = "/{id}")
-    fun getById(@PathVariable id: Long): String {
+    fun getById(@PathVariable id: Long): Veiculo {
+
         LOG.info("Buscando retorno no service para veiculo: $id")
-        veiculoService.findById(id)
-        return "OLa"
+
+        return veiculoService.findById(id)
     }
 
     @Get(produces = [MediaType.APPLICATION_JSON])
-    fun getAll(): String {
+    fun getAll(): MutableList<Veiculo> {
+
         LOG.info("Buscando todos os veiculos")
-        veiculoService.findAll()
-        return "OLa"
+
+        return veiculoService.findAll()
     }
 
     @Post(produces = [MediaType.APPLICATION_JSON], consumes = [MediaType.APPLICATION_JSON])

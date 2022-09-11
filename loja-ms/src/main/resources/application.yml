@@ -1,14 +1,5 @@
 micronaut:
   application:
     name: lojaMs
-datasources:
-  default:
-    driverClassName: org.postgresql.Driver
-    db-type: postgresql
-    schema-generate: CREATE_DROP
-    dialect: POSTGRES
-jpa.default.properties.hibernate.hbm2ddl.auto: update
-netty:
-  default:
-    allocator:
-      max-order: 3
+  server:
+    port: 8081
