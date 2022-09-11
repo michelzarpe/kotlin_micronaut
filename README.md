@@ -6,11 +6,28 @@ A aplicação foi desenvolvida com Kotlin, Java e Micronaut e além das tecnolog
 
 
 ## PostgreSql 
+
 1. docker run --name ms-postgres -e "POSTGRES_PASSWORD=123456" -p 5432:5432 -d postgres
 2. docker exec -it HASH bash  
 3. psql -U postgres
 3. create database dbveiculo
 4. \q
 
+## Redis
+
+1. docker run --name ms-redis -p 6379:6379 -d redis  
+2. docker exec -it HASH sh
+3. redis-cli
+4. keys *
+5. get 2
+
+
+## Kafka
+
+1. Baixar o kafka no site oficial
+2. descompactar
+3. em bin/windows ou no nivel anterior exec: zookeeper-server-start.bat C:\kafka_Versao\config\zookeeper.properties
+4. em bin/windows ou no nivel anterior exec: kafka-server-start.bat c:\Kafka_versao\config\server.properties
+5. em bin/windows ou no nivel anterior listar topicos exec: kafka-topics.bat --bootstrap-server localhost:9092 --list
 
 
