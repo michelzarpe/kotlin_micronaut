@@ -29,5 +29,5 @@ A aplicação foi desenvolvida com Kotlin, Java e Micronaut e além das tecnolog
 3. em bin/windows ou no nivel anterior exec: zookeeper-server-start.bat C:\kafka_Versao\config\zookeeper.properties
 4. em bin/windows ou no nivel anterior exec: kafka-server-start.bat c:\Kafka_versao\config\server.properties
 5. em bin/windows ou no nivel anterior listar topicos exec: kafka-topics.bat --bootstrap-server localhost:9092 --list
-
+6. em bin/windows ou no nivel anterior CONSUMIR exec: kafka-console-consumer.bat --boostrap-server localhost:9092 --topic ms-vendas --from-beginning
 
