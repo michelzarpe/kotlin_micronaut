@@ -3,7 +3,10 @@ micronaut:
     name: veiculoMs
 datasources:
   default:
+    url: jdbc:postgresqk://localhost:5432/dbveiculos
     driverClassName: org.postgresql.Driver
+    username: postgres
+    password: '123456'
     db-type: postgresql
     schema-generate: CREATE_DROP
     dialect: POSTGRES
@@ -11,4 +14,14 @@ netty:
   default:
     allocator:
       max-order: 3
-jpa.default.properties.hibernate.hbm2ddl.auto: update
+
+jpa:
+  default:
+    packages-to-scan:
+      - 'com.michelzarpelon.curso.model'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+        format_sql: true
