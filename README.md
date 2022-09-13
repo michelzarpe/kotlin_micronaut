@@ -31,3 +31,6 @@ A aplicação foi desenvolvida com Kotlin, Java e Micronaut e além das tecnolog
 5. em bin/windows ou no nivel anterior listar topicos exec: kafka-topics.bat --bootstrap-server localhost:9092 --list
 6. em bin/windows ou no nivel anterior CONSUMIR exec: kafka-console-consumer.bat --boostrap-server localhost:9092 --topic ms-vendas --from-beginning
 
+## MongoDB
+1. docker run -p 21017:21017 --name ms-mongo -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=123456 mongo
+2. usar robomongo criar db vendas e criar collection venda

@@ -3,3 +3,6 @@ micronaut:
     name: relatorioMs
   server:
     port: 8082
+
+mongodb:
+  uri: 'mongodb://localhost:27017/venda'
