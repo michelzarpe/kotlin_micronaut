@@ -7,3 +7,10 @@ micronaut:
 kafka:
   bootstrap:
     servers: localhost:9092
+
+
+consul:
+  client:
+    resitration:
+      enabled: true
+    defaultZone: "localhost:8500"

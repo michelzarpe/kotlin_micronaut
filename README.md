@@ -34,3 +34,7 @@ A aplicação foi desenvolvida com Kotlin, Java e Micronaut e além das tecnolog
 ## MongoDB
 1. docker run -p 21017:21017 --name ms-mongo -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=123456 mongo
 2. usar robomongo criar db vendas e criar collection venda
+
+## Consul (service discovery)
+1. docker run -p 8500:8500 -d consul
+2. Navegador: localhost:8500

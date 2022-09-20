@@ -6,3 +6,9 @@ micronaut:
 
 mongodb:
   uri: 'mongodb://localhost:27017/venda'
+
+consul:
+  client:
+    resitration:
+      enabled: true
+    defaultZone: "localhost:8500"
