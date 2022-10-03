@@ -2,7 +2,7 @@ micronaut:
   application:
     name: lojaMs
   server:
-    port: 8081
+    port: -1
 
 kafka:
   bootstrap:

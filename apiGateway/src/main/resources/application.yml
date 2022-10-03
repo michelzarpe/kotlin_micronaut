@@ -1,0 +1,24 @@
+micronaut:
+  application:
+    name: apiGateway
+  server:
+    port: 9999
+  config-client:
+    enable: true
+
+consul:
+  client:
+    defaultZone: ${CONSUL_HOST:localhost}:${CONSUL_PORT:8500}
+    registration:
+      enabled: true
+
+gateway:
+  services:
+    - veiculosMs
+    - lojaMs
+    - relatorioMs
+
+netty:
+  default:
+    allocator:
+      max-order: 3

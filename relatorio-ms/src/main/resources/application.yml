@@ -2,7 +2,7 @@ micronaut:
   application:
     name: relatorioMs
   server:
-    port: 8082
+    port: -1
 
 mongodb:
   uri: 'mongodb://localhost:27017/venda'
